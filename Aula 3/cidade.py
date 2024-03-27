@@ -1,6 +1,7 @@
 class Cidade:
-    def __init__(self, nome = 'Santa Cruz do Sul'):
-        self.id = None
+
+    def __init__(self, id = 0, nome = "Itati"):
+        self.id = id
         self.nome = nome
 
     def __str__(self):

@@ -1,14 +1,8 @@
 from cidade import Cidade
 class Pessoa:
 
-    def __init__(self, nome, idade = 18, cidade = Cidade("Pindamonhangaba")):
-        self.id = None
+    def __init__(self, nome, idade=18, cid=Cidade( None ,"Tangamandápio") ):
         self.nome = nome
         self.idade = idade
-        self.cidade = cidade
-    
-    def __str__(self):
-        texto = "Nome: " + self.nome
-        texto += "\nIdade: " + str(self.idade)
-        return texto
-        
+        self.cidade = cid
+        print( "Pessoa " , self.nome, " construída")
