@@ -1,8 +1,9 @@
 from produto import Produto
+from categoria import Categoria
 
 class Desktop(Produto):
-    def __init__(self, modelo, cor, preco, categoria, fonte):
-        super().__init__(modelo, cor, preco, categoria)
+    def __init__(self, modelo, cor, preco, fonte):
+        super().__init__(modelo, cor, preco)
         self._fonte = fonte
     
     @property
@@ -13,5 +14,10 @@ class Desktop(Produto):
     def bateria(self, potencia):
         self._fonte = potencia
 
+    def cadastrar(self):
+        self.categoria = Categoria(3, 'Desktop')
+
     def getInformacoes(self):
-        return "DESKTOP\n" + super().getInformacoes() + "Fonte: " + self._fonte
+        return "\nDESKTOP\n" + super().getInformacoes() + "\n            Fonte: " + str(self._fonte) + "W"
+        
+    
